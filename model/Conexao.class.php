@@ -1,9 +1,11 @@
 <?php 
 
-Class Conexao extends Config{
-	private $host, $user, $senha, $banco, $prefix;
+Class Conexao extends Config {
+	private $host, $user, $senha, $banco;
 
-	function __construct(){
+	protected $obj, $itens=array(), $prefix;
+
+	function __construct() {
 		$this->host = self::BD_HOST;
 		$this->user = self::BD_USER;
 		$this->senha = self::BD_SENHA;
@@ -20,7 +22,7 @@ Class Conexao extends Config{
 		}
 	}
 
-	private function Conectar(){
+	private function Conectar() {
 		$options = array(
 				PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
 				PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING);
@@ -30,17 +32,21 @@ Class Conexao extends Config{
 		return $link;					
 	}
 
-	function ExecuteSQL($query, array $params = NULL){
+	function ExecuteSQL($query, array $params = NULL) {
 		$this->obj = $this->Conectar()->prepare($query);
 		return $this->obj->execute();
 	}
 
-	function ListarDados(){
+	function ListarDados() {
 		return $this->obj->fetch(PDO::FETCH_ASSOC);
 	}
 
-	function TotalDados(){
+	function TotalDados() {
 		return $this->obj->rowCount();
+	}
+
+	function GetItens() {
+		return $this->itens;
 	} 	 
 } 
 

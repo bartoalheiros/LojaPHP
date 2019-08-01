@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-24 03:30:38
+/* Smarty version 3.1.33, created on 2019-07-28 04:55:51
   from 'C:\xampp\htdocs\loja\view\contato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d37b4be2b6140_54516177',
+  'unifunc' => 'content_5d3d0eb7227245_77889343',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f7a47e5bba83ab1eb9d43bf7b4a6db9081af27a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\loja\\view\\contato.tpl',
-      1 => 1563931831,
+      1 => 1564282547,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d37b4be2b6140_54516177 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d3d0eb7227245_77889343 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
   <div class="row">
 
-    <form class="form-horizontal" id="frmcontatoazul" action="/controller/envio.php" method="get">
+    <form class="form-horizontal" id="frmcontatoazul" action="/envio.php" method="get">
       <fieldset>
 
         <!-- Form Name -->
@@ -60,7 +60,7 @@ function content_5d37b4be2b6140_54516177 (Smarty_Internal_Template $_smarty_tpl)
         <div class="form-group">
           <label class="col-md-4 control-label" for="btnenviar"></label>
           <div class="col-md-8">
-            <button id="btnenviar" name="btnenviar" class="btn btn-primary btn-lg">Enviar</button>
+            <button id="btnenviar" name="btnenviar" class="btn btn-primary btn-lg" type="submit">Enviar</button>
 
           </div>
         </div>
@@ -68,7 +68,9 @@ function content_5d37b4be2b6140_54516177 (Smarty_Internal_Template $_smarty_tpl)
         
       </fieldset>
     </form>
-
+    <?php echo '<?php
+      ';?>var_dump(_GET);
+    <?php echo '?>';?> 
   </div>
 </div><?php }
 }

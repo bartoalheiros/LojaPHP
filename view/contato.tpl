@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <form class="form-horizontal" id="frmcontatoazul" action="/controller/envio.php" method="get">
+    <form class="form-horizontal" id="frmcontatoazul" action="/envio.php" method="get">
       <fieldset>
 
         <!-- Form Name -->
@@ -37,7 +37,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="btnenviar"></label>
           <div class="col-md-8">
-            <button id="btnenviar" name="btnenviar" class="btn btn-primary btn-lg">Enviar</button>
+            <button id="btnenviar" name="btnenviar" class="btn btn-primary btn-lg" type="submit">Enviar</button>
 
           </div>
         </div>
@@ -45,6 +45,8 @@
         
       </fieldset>
     </form>
-
+    <?php
+      var_dump(_GET);
+    ?> 
   </div>
 </div>
