@@ -124,19 +124,15 @@
                     </ul>   
                     <!-- fim do menu breadcrumb-->             
                     
-                  
+                  {php}
+                    Rotas::get_Pagina();    
+                  {/php}
                     
                 </div>  <!--fim coluna direita-->  
             	
-            	{php}
-            		Rotas::get_Pagina();	
-            	{/php}
+            	
 
             </div>   
-                
-                
-            
-                
                 
                 
             </div><!-- fim DIV conteudo-->

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-28 04:55:51
+/* Smarty version 3.1.33, created on 2019-08-08 01:11:51
   from 'C:\xampp\htdocs\loja\view\contato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d3d0eb7227245_77889343',
+  'unifunc' => 'content_5d4b5ab7ace995_42069486',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f7a47e5bba83ab1eb9d43bf7b4a6db9081af27a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\loja\\view\\contato.tpl',
-      1 => 1564282547,
+      1 => 1565219505,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d3d0eb7227245_77889343 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4b5ab7ace995_42069486 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="container">
   <div class="row">
 
-    <form class="form-horizontal" id="frmcontatoazul" action="/envio.php" method="get">
+     <?php echo '<?php
+      ';?>var_dump($_GET);
+      <?php echo '?>';?> 
+    <form class="form-horizontal" id="frmcontatoazul" action="controller/envio.php" method="get">
       <fieldset>
 
         <!-- Form Name -->
@@ -60,7 +63,7 @@ function content_5d3d0eb7227245_77889343 (Smarty_Internal_Template $_smarty_tpl)
         <div class="form-group">
           <label class="col-md-4 control-label" for="btnenviar"></label>
           <div class="col-md-8">
-            <button id="btnenviar" name="btnenviar" class="btn btn-primary btn-lg" type="submit">Enviar</button>
+            <button name="btnenviar" class="btn btn-primary btn-lg" type="submit">Enviar</button>
 
           </div>
         </div>
@@ -68,9 +71,7 @@ function content_5d3d0eb7227245_77889343 (Smarty_Internal_Template $_smarty_tpl)
         
       </fieldset>
     </form>
-    <?php echo '<?php
-      ';?>var_dump(_GET);
-    <?php echo '?>';?> 
+   
   </div>
 </div><?php }
 }
